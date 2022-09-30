@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Calendario</title>
+  </head>
+  <body>
+    <div class="container w-75 border border-2 rounded-3 my-5 p-3">
+      <!-- Titulo -->
+      <h6>Calendario</h6>
+
+      <p id="textError" class="text-danger fw-bold"></p>
+
+      <!-- Fecha -->
+      <div class="container row my-2 align-items-center mx-auto gap-2">
+        <label class="col-lg-3">Fecha</label>
+        <input
+          id="inputDay"
+          class="col-lg form-control"
+          month="day"
+          placeholder="27"
+          type="text"
+          required
+        />
+        <select id="inputMonth" class="col-lg form-control" required>
+          <option value="0">Enero</option>
+          <option value="1">Febrero</option>
+          <option value="2">Marzo</option>
+          <option value="3">Abril</option>
+          <option value="4">Mayo</option>
+          <option value="5">Junio</option>
+          <option value="6">Julio</option>
+          <option value="7">Agosto</option>
+          <option value="8">Septiembre</option>
+          <option value="9">Octubre</option>
+          <option value="10">Noviembre</option>
+          <option value="11">Diciembre</option>
+        </select>
+        <input
+          id="inputYear"
+          class="col-lg form-control"
+          type="text"
+          placeholder="2022"
+          required
+        />
+        <input
+          id="inputLeap"
+          class="col-lg form-control"
+          type="text"
+          readonly
+        />
+      </div>
+
+      <!-- Calcular -->
+      <div class="text-center">
+        <button id="btnCalculate" class="btn btn-outline-primary">
+          Calcular
+        </button>
+      </div>
+
+      <!-- Resultado -->
+      <div class="container row my-2 input-group align-items-center mx-auto gap-2">
+        <label class="col-lg-3">Este día es:</label>
+        <input
+          id="inputWorkingDay"
+          class="col-5 form-control"
+          type="text"
+          readonly
+        />
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
